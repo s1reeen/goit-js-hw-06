@@ -1,18 +1,20 @@
 class StringBuilder {
+  #value;
+
   constructor(initialValue) {
-    this.value = initialValue;
+    this.#value = initialValue;
   }
 
   getValue() {
-    return this.value;
+    return this.#value;
   }
 
   padStart(str) {
-    this.value = str + this.value;
+    this.#value = str + this.#value;
   }
 
   padEnd(str) {
-    this.value += str;
+    this.#value += str;
   }
 
   padBoth(str) {
@@ -21,6 +23,7 @@ class StringBuilder {
   }
 }
 
+// Перевірка роботи класу StringBuilder
 const builder = new StringBuilder(".");
 console.log(builder.getValue()); // "."
 builder.padStart("^");
